@@ -9,10 +9,15 @@
 
     <nav class="main-nav" aria-label="Main navigation">
       <ul class="nav-list">
-        <li><a href="/">Home</a></li>
+        <li class="nav-item">
+          <a href="/" class="nav-link"><span>Home</span></a>
+        </li>
 
-        <li class="has-dropdown">
-          <a href="/student-tools">Student Tools</a>
+        <li class="nav-item has-dropdown">
+          <a href="/student-tools" class="nav-link">
+            <span>Student Tools</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="/start-writing">Start Writing</a></li>
             <li><a href="/start-coding">Start Coding</a></li>
@@ -22,17 +27,23 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="/teacher-tools">Teacher Tools</a>
+        <li class="nav-item has-dropdown">
+          <a href="/teacher-tools" class="nav-link">
+            <span>Teacher Tools</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="/create-editor">Create an Editor</a></li>
             <li><a href="/create-assignment">Create an Assignment</a></li>
-            <li><a href="/teacher-google-docs-extension">Google Docs Extension</a></li>
+            <li><a href="/teacher-google-docs-extension">Extension for Google Docs</a></li>
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="/institutions">Institutions</a>
+        <li class="nav-item has-dropdown">
+          <a href="/institutions" class="nav-link">
+            <span>Institutions</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="/canvas-users">Canvas Users</a></li>
             <li><a href="/d2l-users">D2L Users</a></li>
@@ -43,13 +54,17 @@
           </ul>
         </li>
 
-        <li class="has-dropdown">
-          <a href="/about">About</a>
+        <li class="nav-item has-dropdown">
+          <a href="/about" class="nav-link">
+            <span>About</span>
+            <span class="chevron" aria-hidden="true"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="/about-project">About the Project</a></li>
             <li><a href="/related-research">Related Research</a></li>
             <li><a href="/blog-articles">Blog Articles</a></li>
             <li><a href="/team">Team</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </li>
       </ul>
