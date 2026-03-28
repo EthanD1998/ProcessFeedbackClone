@@ -31,3 +31,47 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(updateCount);
   });
 });
+
+
+
+const scrollRevealSections = document.querySelectorAll(".reveal-on-scroll");
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        obs.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+scrollRevealSections.forEach((section) => {
+  observer.observe(section);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const testimonialBox = document.querySelector("#testimonial-box");
+
+  if (testimonialBox) {
+    const quoteObserver = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            testimonialBox.classList.add("highlight-active");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.35
+      }
+    );
+
+    quoteObserver.observe(testimonialBox);
+  }
+});

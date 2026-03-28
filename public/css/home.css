@@ -251,3 +251,235 @@
     transition: none;
   }
 }
+
+
+
+/*What is Process Feedback section*/
+
+.what-is-section {
+  background: #f3f3f4;
+  padding: 64px 24px 72px;
+}
+
+.what-is-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+.what-is-inner.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.what-is-title {
+  margin: 0 0 18px;
+  text-align: center;
+  color: #8a3200;
+  font-size: 2.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.what-is-text {
+  margin: 0;
+  color: #314761;
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.what-is-text em {
+  font-style: italic;
+}
+
+.workflow-diagram {
+  margin: 42px 0;
+  text-align: center;
+}
+
+.workflow-diagram-image {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.second-paragraph {
+  margin-top: 28px;
+}
+
+.testimonial-box {
+  margin: 42px auto 0;
+  max-width: 620px;
+  position: relative;
+  padding: 12px 48px;
+}
+
+.testimonial-content p {
+  margin: 0;
+  color: #314761;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.testimonial-meta {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.testimonial-stars,
+.testimonial-source {
+  color: #7c8798;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.quote-mark {
+  position: absolute;
+  color: #983700;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.quote-open {
+  top: -4px;
+  left: 0;
+}
+
+.quote-close {
+  right: 0;
+  bottom: -26px;
+}
+
+@media (max-width: 900px) {
+  
+
+  .testimonial-box {
+    padding: 20px 24px 28px;
+  }
+
+  .quote-open,
+  .quote-close {
+    position: static;
+    display: inline-block;
+    font-size: 3rem;
+  }
+
+  .quote-close {
+    float: right;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .what-is-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/*Bottom quote*/
+.quote-visible-wrap {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.testimonial-box {
+  margin: 42px auto 0;
+  max-width: 620px;
+  position: relative;
+  padding: 12px 48px;
+  overflow: hidden;
+}
+
+.quote-mark {
+  position: absolute;
+  color: #983700;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  z-index: 2;
+}
+
+.quote-open {
+  top: -4px;
+  left: 0;
+}
+
+.quote-close {
+  right: 0;
+  bottom: -26px;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-content p {
+  margin: 0;
+  color: #314761;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.testimonial-meta {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.testimonial-stars,
+.testimonial-source {
+  color: #7c8798;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* highlight sweep layer */
+.testimonial-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 80%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(152, 55, 0, 0) 0%,
+    rgba(152, 55, 0, 0.10) 20%,
+    rgba(152, 55, 0, 0.22) 50%,
+    rgba(152, 55, 0, 0.10) 80%,
+    rgba(152, 55, 0, 0) 100%
+  );
+  opacity: 0;
+}
+
+/* run once when scrolled into view */
+.testimonial-box.highlight-active::before {
+  opacity: 1;
+  animation: quoteHighlightSweep 1.15s ease-out forwards;
+}
+
+@keyframes quoteHighlightSweep {
+  0% {
+    left: -140%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
