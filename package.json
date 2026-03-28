@@ -1,0 +1,18 @@
+{
+    "name": "processfeedback-clone",
+    "version": "1.0.0",
+    "description": "Phase 1 of the Feedback clone site",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "author": "Ethan Doll",
+    "dependencies": {
+        "express": "^4.19.2",
+        "express-handlebars": "^7.1.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}
