@@ -483,3 +483,254 @@
     opacity: 0;
   }
 }
+
+
+/*Reveal process section*/
+.reveal-process-section {
+  background: #f6efeb;
+  padding: 56px 24px 70px;
+}
+
+.reveal-process-card {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #f4f4f4;
+  border-radius: 38px;
+  padding: 40px 56px 34px;
+}
+
+.reveal-process-title {
+  margin: 0 0 26px;
+  text-align: center;
+  color: #983700;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.reveal-process-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reveal-process-list li {
+  position: relative;
+  margin-bottom: 18px;
+  padding-left: 28px;
+  color: #1f2f45;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.reveal-process-list li:last-child {
+  margin-bottom: 0;
+}
+
+.reveal-process-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c24d0a;
+  transform: translateY(-50%);
+}
+
+/* fade in only the bullet list */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .reveal-process-section {
+    padding: 42px 16px 54px;
+  }
+
+  .reveal-process-card {
+    padding: 28px 22px 24px;
+    border-radius: 28px;
+  }
+
+  .reveal-process-title {
+    font-size: 1.55rem;
+    margin-bottom: 20px;
+  }
+
+  .reveal-process-list li {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    padding-left: 24px;
+  }
+
+  .reveal-process-list li::before {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/*Map section*/
+
+.countries-section {
+  background: #FFFFFF;
+  padding: 58px 24px 72px;
+}
+
+.countries-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.countries-top {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.countries-title {
+  margin: 0;
+  color: #2d3f57;
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.countries-description {
+  max-width: 760px;
+  margin: 18px auto 0;
+  color: #314761;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.countries-map-wrap {
+  text-align: center;
+  background: #f5f5f6;
+  /*border: 1px solid #dddddf;*/
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.countries-map-image {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.countries-map-wrap:hover .countries-map-image {
+  transform: scale(1.02);
+}
+
+.countries-legend {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2f45;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.legend-extensive {
+  background: #1a4f9f;
+}
+
+.legend-moderate {
+  background: #2e73c8;
+}
+
+.legend-occasional {
+  background: #84aeea;
+}
+
+/* fade in only the text block */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(38px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .countries-section {
+    padding: 42px 16px 52px;
+  }
+
+  .countries-title {
+    font-size: 1.7rem;
+  }
+
+  .countries-description {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .countries-legend {
+    gap: 18px 24px;
+  }
+
+  .legend-item {
+    font-size: 0.9rem;
+  }
+
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .countries-map-image {
+    transition: none;
+  }
+
+  .countries-map-wrap:hover .countries-map-image {
+    transform: none;
+  }
+}
