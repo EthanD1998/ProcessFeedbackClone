@@ -356,7 +356,7 @@
 }
 
 @media (max-width: 900px) {
-  
+
 
   .testimonial-box {
     padding: 20px 24px 28px;
@@ -450,14 +450,12 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background: linear-gradient(
-    90deg,
-    rgba(152, 55, 0, 0) 0%,
-    rgba(152, 55, 0, 0.10) 20%,
-    rgba(152, 55, 0, 0.22) 50%,
-    rgba(152, 55, 0, 0.10) 80%,
-    rgba(152, 55, 0, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(152, 55, 0, 0) 0%,
+      rgba(152, 55, 0, 0.10) 20%,
+      rgba(152, 55, 0, 0.22) 50%,
+      rgba(152, 55, 0, 0.10) 80%,
+      rgba(152, 55, 0, 0) 100%);
   opacity: 0;
 }
 
@@ -472,12 +470,15 @@
     left: -140%;
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   70% {
     opacity: 1;
   }
+
   100% {
     left: 140%;
     opacity: 0;
