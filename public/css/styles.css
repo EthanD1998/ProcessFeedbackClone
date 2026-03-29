@@ -30,7 +30,8 @@ a {
   justify-content: center;  
   align-items: center;       
   text-align: center;
-  min-height: 80vh; 
+  min-height: 60vh; 
+  padding-bottom: 80px;
 }
 
 /* same background color */
@@ -65,7 +66,7 @@ a {
   color: white;
   border-radius: 999px;  
   font-size: 15px;
-  font-weight: 500;
+  font-weight: bold;
   transition: all 0.2s ease;
 }
 
