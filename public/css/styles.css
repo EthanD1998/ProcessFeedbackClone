@@ -30,7 +30,13 @@ a {
   justify-content: center;  
   align-items: center;       
   text-align: center;
-  min-height: 80vh;         
+  min-height: 80vh; 
+}
+
+/* same background color */
+.error-page img {
+  mix-blend-mode: multiply;
+  max-width: 320px;
 }
 
 .error-page h1 {
@@ -40,12 +46,13 @@ a {
 }
 
 .error-page h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .error-page p {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
   margin-bottom: 30px;
 }
@@ -53,12 +60,13 @@ a {
 /* button */
 .error-page a {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: black;
+  padding: 12px 28px;
+  background: #1a73e8;
   color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 10px;
+  border-radius: 999px;  
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .error-page a:hover {
