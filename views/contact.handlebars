@@ -1,4 +1,57 @@
-<section>
-    <h2>Contact Page</h2>
-    <p>This is the contact page.</p>
+<section class="contact-page">
+    <div class="contact-header">
+        <h1>Send us a message</h1>
+        <p>
+            Use this form below to send us a message. Please double check your email
+            address before submitting the form because that is where we will reply.
+            Also, sometimes our reply to you could land in your spam folder.
+        </p>
+    </div>
+
+    <div class="contact-card">
+        <div class="contact-illustration">
+            <img src="/css/images/contact-illustration.png" alt="Contact illustration">
+        </div>
+
+        <div class="contact-form-side">
+            {{#if success}}
+            <p class="success-msg">{{success}}</p>
+            {{/if}}
+
+            {{#if error}}
+            <p class="error-msg">{{error}}</p>
+            {{/if}}
+
+        <form action="/contact" method="POST" class="contact-form">
+            <div class="contact-row">
+                <label for="name">Your name <span>*</span></label>
+                <input id="name" name="name" type="text" placeholder="John Doe" required>
+            </div>
+
+            <div class="contact-row">
+                <label for="email">Your email <span>*</span></label>
+                <input id="email" name="email" type="email" placeholder="you@university.edu" required>
+            </div>
+
+            <div class="contact-row">
+                <label for="confirmEmail">Retype email <span>*</span></label>
+                <input id="confirmEmail" name="confirmEmail" type="email" placeholder="you@university.edu" required>
+            </div>
+
+            <div class="contact-row">
+                <label for="subject">Subject <span>*</span></label>
+                <input id="subject" name="subject" type="text" placeholder="Topic of your message" required>
+            </div>
+
+            <div class="contact-row contact-row-message">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" name="message" placeholder="Share us your question or feedback" required></textarea>
+            </div>
+
+            <div class="contact-button-wrap">
+                <button type="submit">Send Message </button>
+            </div>
+        </form>
+        </div>
+    </div>
 </section>

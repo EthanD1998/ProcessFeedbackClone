@@ -4,6 +4,7 @@ const exphbs = require("express-handlebars")
 
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
+require("dotenv").config();
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.engine("handlebars", exphbs.engine({
 }))
 app.set("view engine", "handlebars");
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/robots.txt", (req, res) => {

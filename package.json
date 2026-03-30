@@ -10,9 +10,11 @@
     "author": "Ethan Doll",
     "dependencies": {
         "connect-livereload": "^0.6.1",
+        "dotenv": "^17.3.1",
         "express": "^4.19.2",
         "express-handlebars": "^7.1.2",
-        "livereload": "^0.10.3"
+        "livereload": "^0.10.3",
+        "nodemailer": "^8.0.4"
     },
     "devDependencies": {
         "nodemon": "^3.1.0"
