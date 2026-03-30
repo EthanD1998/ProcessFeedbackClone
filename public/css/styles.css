@@ -211,5 +211,11 @@ a {
     .footer-bottom-right {
         width: 100%;
     }
+    .disclaimer {
+        font-size: 0.8rem;
+        color: #9aa3ad;
+        max-width: 500px;
+        line-height: 1.5;
+    }
 }
 
