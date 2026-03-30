@@ -75,3 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
     quoteObserver.observe(testimonialBox);
   }
 });
+
+const hamburger = document.querySelector('.hamburger');
+const mainNav = document.querySelector('.main-nav');
+
+hamburger.addEventListener('click', () => {
+  mainNav.classList.toggle('mobile-open');
+});
+
+mainNav.querySelectorAll('.has-dropdown .nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    if (mainNav.classList.contains('mobile-open')) {
+      e.preventDefault();
+      const dropdown = link.closest('.nav-item').querySelector('.dropdown-menu');
+      const isOpen = dropdown.classList.contains('accordion-open');
+
+      // close all dropdowns first
+      mainNav.querySelectorAll('.dropdown-menu').forEach(d => d.classList.remove('accordion-open'));
+      mainNav.querySelectorAll('.chevron').forEach(c => c.classList.remove('chevron-up'));
+
+      // if it wasn't open, open it
+      if (!isOpen) {
+        dropdown.classList.add('accordion-open');
+        link.querySelector('.chevron').classList.add('chevron-up');
+      }
+    }
+  });
+});
