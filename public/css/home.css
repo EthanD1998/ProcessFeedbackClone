@@ -734,3 +734,145 @@
     transform: none;
   }
 }
+/*mobile phone*/
+@media (max-width: 768px) {
+    .hero-inner,
+    .what-is-inner,
+    .reveal-process-card,
+    .countries-inner {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-inner {
+        padding: 48px 16px 110px;
+    }
+
+    .hero-title {
+        font-size: 2.6rem;
+        line-height: 1.08;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-top: 18px;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .hero-buttons {
+        gap: 14px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 15px 18px;
+        font-size: 1rem;
+    }
+
+    .hero-features {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 40px;
+    }
+
+    .feature-column {
+        gap: 14px;
+    }
+
+    .feature-item {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .stats-strip {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .what-is-section,
+    .reveal-process-section,
+    .countries-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .what-is-title,
+    .reveal-process-title,
+    .countries-title {
+        font-size: 1.7rem;
+        line-height: 1.25;
+    }
+
+    .what-is-text,
+    .countries-description,
+    .testimonial-content p,
+    .reveal-process-list li {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .testimonial-box {
+        max-width: 100%;
+        padding: 18px 20px 24px;
+    }
+
+    .countries-map-wrap {
+        width: 100%;
+    }
+
+    .countries-map-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+
+    .hero-inner {
+        padding: 40px 16px 90px;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+        line-height: 1.1;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-description {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .hero-stars {
+        font-size: 1.4rem;
+    }
+
+    .hero-features {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-item {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .feature-arrow {
+        font-size: 1.3rem;
+    }
+
+    .stat-card {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}

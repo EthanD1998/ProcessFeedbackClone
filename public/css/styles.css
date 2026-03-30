@@ -11,6 +11,7 @@ html, body {
 body {
     background: #ededf0;
     color: #34455d;
+    overflow-x: hidden;
 }
 
 img {
@@ -169,5 +170,46 @@ a {
     font-weight: 700;
     line-height: 1;
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    .footer-inner {
+        width: 100%;
+        max-width: 100%;
+        padding: 32px 16px 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+        row-gap: 28px;
+    }
+
+    .footer-column h3 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .footer-column li {
+        margin-bottom: 12px;
+    }
+
+    .footer-column a {
+        font-size: 15px;
+        line-height: 1.45;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    .footer-bottom {
+        margin-top: 24px;
+        padding-top: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom-left,
+    .footer-bottom-right {
+        width: 100%;
+    }
 }
 
