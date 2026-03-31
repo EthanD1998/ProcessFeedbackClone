@@ -19,6 +19,14 @@ router.get("/contact", (req, res) => {
     });
 });
 
+// Attribution Page
+router.get("/Attribution", (req, res) =>{
+    res.render("attribution", {
+        title: "Attribution",
+        page: "attribution"
+    });
+})
+
 router.post("/contact", async (req, res) => {
     const { name, email, subject, message } = req.body;
 
