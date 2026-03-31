@@ -29,6 +29,19 @@
   color: #243d5a;
 }
 
+.hero-site-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #0f54f0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.hero-site-link:hover {
+  text-decoration: underline;
+}
+
 .hero-buttons {
   margin-top: 38px;
   display: flex;
