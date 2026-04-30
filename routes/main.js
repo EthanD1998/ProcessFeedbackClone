@@ -19,6 +19,14 @@ router.get("/contact", (req, res) => {
     });
 });
 
+// Pricing page
+router.get("/pricing", (req, res) => {
+    res.render("pricing", { 
+        title: "Pricing",
+        page: "pricing"
+    });
+});
+
 // Attribution Page
 router.get("/Attribution", (req, res) =>{
     res.render("attribution", {
