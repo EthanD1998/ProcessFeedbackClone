@@ -1,0 +1,628 @@
+.pricing-hero {
+  background: linear-gradient(
+    to bottom,
+    #f4f5f7 0%,
+    #e7e8ea 40%,
+    #a9c2fb 100%
+  );
+
+  padding: 1px 1px 20px;
+  text-align: center;
+}
+
+.pricing-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-hero h1 {
+  font-size: 52px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+.pricing-hero p {
+  font-size: 17px;
+  color: #656a77;
+}
+
+/* =========================
+   TITLE SECTION
+========================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* section */
+.pricing-content {
+  background: #ffffff;
+  text-align: center;
+  padding: 20px 40px 100px;
+}
+
+/* title */
+.pricing-content h2 {
+  font-size: 28px;
+  color: #1f3b6d;
+  margin-bottom: 10px;
+}
+
+/* subtitle */
+.subtitle {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: left;
+  color: #38383e;
+}
+
+/* main layout */
+.pricing-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+/* left */
+.pricing-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-image img {
+  width: 240px;
+}
+
+/* right */
+.pricing-list {
+  flex: 1;
+  text-align: left;
+  max-width: 480px;
+}
+
+/* list title */
+.list-title {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* list */
+.pricing-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-list li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 18px;
+  line-height: 1;
+  color: #374151;
+}
+
+/* arrow */
+.pricing-list li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #91b7e6;
+  font-weight: bold;
+  padding-left:15px;
+}
+
+/* bottom text */
+.why-text {
+  margin-top: 5px;
+  text-align: center;   /* center the text */
+}
+
+.why-text span {
+  display: inline-block;
+  max-width: 720px;
+  text-align: left;     /* text align with left */
+  line-height: 1.7;
+  color: #374151;
+}
+
+.why-text strong {
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pricing-main {
+    flex-direction: column;   /* stack */
+    gap: 30px;
+  }
+
+  .pricing-image {
+    order: -1;   /* image goes on top */
+  }
+
+  .pricing-image img {
+    width: 200px;
+  }
+
+  .pricing-list {
+    max-width: 100%;
+  }
+
+  .why-text {
+    text-align: left;
+    padding: 0 10px;
+  }
+}
+
+/* =========================
+   accessible section
+========================= */
+.accessible-section {
+  background-color: #b5e2f8;
+  padding: 15px 20px;
+}
+
+.accessible-wrapper {
+  max-width: 900px;   /* ← 原網站比較窄 */
+  margin: 0 auto;
+}
+
+/* 標題 */
+.accessible-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f3b57;
+  margin-bottom: 15px;
+}
+
+/* 上面那段 */
+.accessible-desc {
+  text-align: left center;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  line-height: 2;
+  padding: 0px 20px;
+  color: #2f3e4d;
+}
+
+/* container 左右區塊 */
+.accessible-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* 左邊文字 */
+.accessible-text {
+  flex: 1;
+  max-width: 700px;
+  margin-left: 120px; 
+}
+
+/* Schools 那行 */
+.accessible-sub {
+  margin-bottom: 15px;
+  color: #2f3e4d;
+  text-align: left;
+  font-size: 16px;
+}
+
+/* list */
+.accessible-text ul {
+  list-style: none;
+  padding: 10px; /* 🔥 修正 */
+}
+
+.accessible-text li {
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+}
+
+/* 箭頭 */
+.accessible-text li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  color: #7dabec;
+}
+
+/* 右邊圖片 */
+.accessible-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.accessible-image img {
+  width: 350px;   /* 🔥 控制大小 */
+  max-width: 100%;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .accessible-container {
+    flex-direction: column;
+    text-align: left center;
+  }
+
+  .accessible-text {
+    max-width: 100%;
+  }
+
+  .accessible-image img {
+    width: 250px;
+  }
+}
+
+
+/* insitution */
+/* container */
+.institution-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* section */
+.institution-section {
+  background: #ffffff;
+  text-align: center;
+  padding: 20px 40px 70px; /* 跟 pricing 一樣 */
+}
+
+/* title */
+.institution-title {
+  font-size: 28px; /* 跟 pricing h2 一樣 */
+  color: #1f3b6d;
+  margin-bottom: 10px;
+}
+
+/* description (subtitle 對齊 pricing) */
+.institution-description {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: left;
+  color: #38383e;
+  line-height: 1.6;
+}
+
+/* main layout */
+.institution-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px; /* 跟 pricing 一樣 */
+}
+
+/* left image */
+.institution-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.institution-image img {
+  width: 240px;
+}
+
+/* right text */
+.institution-text {
+  flex: 1;
+  text-align: left;
+  max-width: 480px;
+  line-height: 1.5;
+
+}
+
+/* subtitle */
+.institution-subtitle {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* list */
+.institution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.institution-list li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 18px;
+  line-height: 1;
+  color: #374151;
+}
+
+/* arrow */
+.institution-list li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #91b7e6;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+
+/* BUTTON Wrappar*/
+.institution-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* BUTTON */
+.institution-btn {
+  padding: 12px 48px;
+  border: 2px solid #10255a;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #10255a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.institution-btn:hover {
+  background: #4a7cff;
+  color: white;
+}
+
+/* RESPONSIVE - INSTITUTION */
+@media (max-width: 768px) {
+  .institution-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .institution-image {
+    order: -1;
+  }
+
+  .institution-image img {
+    width: 200px;
+    max-width: 100%;
+  }
+
+  .institution-text {
+    max-width: 100%;
+  }
+}
+
+
+/* Commitment */
+/* SECTION */
+.commitment-section {
+  background: #b5e2f8; /* 藍色背景 */
+  padding: 20px 20px;
+  text-align: center;
+}
+
+/* CONTAINER */
+.commitment-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* TITLE */
+.commitment-title {
+  font-size: 24px;
+  color: #1f3b6d;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPTION */
+.commitment-description {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: left;
+  color: #38383e;
+  line-height: 2;
+  padding: 0px 10px;
+}
+
+/* 整個區塊 */
+.testimonial-box {
+  margin: 30px auto;
+  max-width: 700px;
+  position: relative;
+  padding: 40px 80px;
+}
+
+/* 文字 */
+.testimonial-content p {
+  margin: 0;
+  color: #314761;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* 作者 */
+.testimonial-meta {
+  margin-top: 40px;
+  text-align: right;
+  color: #6c7a89;
+  position: relative;
+  line-height: 1.5;
+  padding-right: 35px;
+}
+
+/* 右邊直線 */
+.testimonial-meta::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 1px;
+  height: 20px;
+  background: #2c4c6b;
+}
+
+/* ⭐ quote */
+.quote-mark {
+  position: absolute;
+  color: #284b6e;
+  font-size: 100px;
+  font-family: Georgia, serif;
+}
+
+.quote-open {
+  top: 10px;
+  left: 40px;
+}
+
+.quote-close {
+  right: 31px;
+  bottom: -75px;
+}
+
+/* ⭐ 左上橫線 */
+.line-top {
+  position: absolute;
+  top: 29px;
+  left: 85px;
+  width: 50px;
+  height: 1px;
+  background: #2c4c6b;
+}
+
+/* ⭐ 左邊直線 */
+.line-left {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  width: 1px;
+  height: 15px;
+  background: #2c4c6b;
+}
+
+/* ⭐ 右下 */
+.bottom-right {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.line-bottom {
+  width: 50px;
+  height: 1px;
+  background: #2c4c6b;
+  margin-right: 70px;
+  top: 10px;
+}
+
+/* institutional */ 
+.institutional {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.ins-container {
+  background: linear-gradient(180deg, #79b5ee, #cfe4f7);
+  border-radius: 20px;
+  padding: 60px;
+  max-width: 1000px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* left image */
+.left img {
+  width: 250px;
+  
+}
+
+/* right text */
+.right {
+  flex: 1;
+}
+
+.right h2 {
+  font-size: 26px;
+  color: #122947;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.right p {
+  color: #08192a;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.primary {
+  background: #2d87ff;
+  color: white;
+  font-weight: bold;
+}
+
+.primary:hover {
+  background: #5087ca;
+}
+
+.secondary {
+  background: #2d87ff;
+  color: white;
+  font-weight: bold;
+}
+
+.secondary:hover {
+  background: #1c6ed5;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .ins-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+/* reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
