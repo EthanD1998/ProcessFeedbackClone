@@ -23,6 +23,9 @@
             {{/if}}
 
         <form action="/contact" method="POST" class="contact-form">
+
+            <input type="text" name="honeypot" class="honeypot-field" autocomplete="off">
+
             <div class="contact-row">
                 <label for="name">Your name <span>*</span></label>
                 <input id="name" name="name" type="text" placeholder="John Doe" required>
@@ -55,3 +58,5 @@
         </div>
     </div>
 </section>
+
+<script src="/js/contact.js"></script>

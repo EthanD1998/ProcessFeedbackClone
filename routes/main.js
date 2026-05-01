@@ -36,7 +36,34 @@ router.get("/Attribution", (req, res) =>{
 })
 
 router.post("/contact", async (req, res) => {
-    const { name, email, subject, message } = req.body;
+
+    const { honeypot } = req.body;
+
+    if (honeypot) {
+        return res.redirect("/contact");
+    }
+
+    const { name, email, confirmEmail, subject, message } = req.body;
+
+    if (!name || !email || !confirmEmail || !subject || !message) {
+        return res.render("contact", {
+            error: "All fields are required."
+        });
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        return res.render("contact", {
+            error: "Please enter a valid email address."
+        });
+    }
+
+    if (email !== confirmEmail) {
+        return res.render("contact", {
+            error: "Emails do not match."
+        });
+    }
 
     try {
         const transporter = nodemailer.createTransport({
