@@ -891,3 +891,20 @@
         margin: 0 auto;
     }
 }
+/* DARK MODE */
+
+body.dark-mode .stats-strip {
+    background: #0f172a !important;
+}
+
+body.dark-mode .country-card,
+body.dark-mode .reveal-process-card {
+    background: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+body.dark-mode .hero-features,
+body.dark-mode .hero-features li,
+body.dark-mode .hero-features span {
+    color: #f8fafc !important;
+}

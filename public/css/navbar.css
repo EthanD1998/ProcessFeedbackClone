@@ -391,3 +391,18 @@
         .dropdown-menu a {
             font-size: 17px;
         } }
+/* ===== DARK MODE DROPDOWN ===== */
+
+body.dark-mode .dropdown-menu {
+    background: #1e293b !important;
+    border: 1px solid #334155;
+}
+
+    body.dark-mode .dropdown-menu a {
+        color: #f8fafc !important;
+    }
+
+        body.dark-mode .dropdown-menu a:hover {
+            background: #334155;
+            color: #ffffff;
+        }

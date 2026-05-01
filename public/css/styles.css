@@ -531,3 +531,96 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== DARK MODE ===== */
+
+.dark-toggle {
+    border: none;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+    .dark-toggle:hover {
+        background: #1d4ed8;
+    }
+
+body.dark-mode {
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+    body.dark-mode .site-header,
+    body.dark-mode .site-footer {
+        background: #111827 !important;
+    }
+
+    body.dark-mode main,
+    body.dark-mode section,
+    body.dark-mode .hero-section,
+    body.dark-mode .contact-page,
+    body.dark-mode .reveal-process-section,
+    body.dark-mode .countries-section,
+    body.dark-mode .stats-strip {
+        background: #0f172a !important;
+        color: #f8fafc !important;
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode p,
+    body.dark-mode li,
+    body.dark-mode a,
+    body.dark-mode .nav-link,
+    body.dark-mode .brand-tagline,
+    body.dark-mode .contact-row label {
+        color: #f8fafc !important;
+    }
+
+    body.dark-mode .contact-card,
+    body.dark-mode .pricing-card,
+    body.dark-mode .team-card,
+    body.dark-mode .stat-card,
+    body.dark-mode .reveal-process-card {
+        background: #1e293b !important;
+        color: #f8fafc !important;
+    }
+
+        body.dark-mode .contact-card *,
+        body.dark-mode .pricing-card *,
+        body.dark-mode .team-card *,
+        body.dark-mode .stat-card *,
+        body.dark-mode .reveal-process-card * {
+            color: #f8fafc !important;
+        }
+
+    body.dark-mode input,
+    body.dark-mode textarea {
+        background: #334155;
+        color: #f8fafc;
+        border-color: #64748b;
+    }
+
+        body.dark-mode input::placeholder,
+        body.dark-mode textarea::placeholder {
+            color: #cbd5e1;
+        }
+
+    body.dark-mode .dropdown-menu {
+        background: #1e293b !important;
+        border: 1px solid #334155;
+    }
+
+        body.dark-mode .dropdown-menu a {
+            color: #f8fafc !important;
+        }
+
+            body.dark-mode .dropdown-menu a:hover {
+                background: #334155 !important;
+            }

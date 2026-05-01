@@ -1,79 +1,84 @@
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand-block">
-      <a href="/" class="brand-link">
-        <img src="/css/images/Tech.png" alt="Process Feedback logo" class="brand-logo">
-      </a>
-      <p class="brand-tagline">Every Student's Work Has a Story</p>
+﻿<header class="site-header">
+    <div class="header-inner">
+        <div class="brand-block">
+            <a href="/" class="brand-link">
+                <img src="/css/images/Tech.png" alt="Process Feedback logo" class="brand-logo">
+            </a>
+            <p class="brand-tagline">Every Student's Work Has a Story</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link"><span>Home</span></a>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="/student-tools" class="nav-link">
+                        <span>Student Tools</span>
+                        <span class="chevron" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/start-writing">Start Writing</a></li>
+                        <li><a href="/start-coding">Start Coding</a></li>
+                        <li><a href="/extension-google-docs">Extension for Google Docs</a></li>
+                        <li><a href="/process-feedback-extension">Process Feedback Extension</a></li>
+                        <li><a href="/student-guides">Student Guides</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="/teacher-tools" class="nav-link">
+                        <span>Teacher Tools</span>
+                        <span class="chevron" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/create-editor">Create an Editor</a></li>
+                        <li><a href="/create-assignment">Create an Assignment</a></li>
+                        <li><a href="/teacher-google-docs-extension">Extension for Google Docs</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="/institutions" class="nav-link">
+                        <span>Institutions</span>
+                        <span class="chevron" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/canvas-users">Canvas Users</a></li>
+                        <li><a href="/d2l-users">D2L Users</a></li>
+                        <li><a href="/moodle-users">Moodle Users</a></li>
+                        <li><a href="/blackboard-users">Blackboard Users</a></li>
+                        <li><a href="/google-docs-users">Google Docs Users</a></li>
+                        <li><a href="/lti-access">LTI Access</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item has-dropdown">
+                    <a href="/about" class="nav-link">
+                        <span>About</span>
+                        <span class="chevron" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/about-project">About the Project</a></li>
+                        <li><a href="/related-research">Related Research</a></li>
+                        <li><a href="/blog-articles">Blog Articles</a></li>
+                        <li><a href="/team">Team</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <button id="darkModeToggle" class="dark-toggle" type="button" aria-label="Toggle dark mode">
+            🌙 Dark
+        </button>
+
+
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-
-    <nav class="main-nav" aria-label="Main navigation">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="/" class="nav-link"><span>Home</span></a>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="/student-tools" class="nav-link">
-            <span>Student Tools</span>
-            <span class="chevron" aria-hidden="true"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/start-writing">Start Writing</a></li>
-            <li><a href="/start-coding">Start Coding</a></li>
-            <li><a href="/extension-google-docs">Extension for Google Docs</a></li>
-            <li><a href="/process-feedback-extension">Process Feedback Extension</a></li>
-            <li><a href="/student-guides">Student Guides</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="/teacher-tools" class="nav-link">
-            <span>Teacher Tools</span>
-            <span class="chevron" aria-hidden="true"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/create-editor">Create an Editor</a></li>
-            <li><a href="/create-assignment">Create an Assignment</a></li>
-            <li><a href="/teacher-google-docs-extension">Extension for Google Docs</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="/institutions" class="nav-link">
-            <span>Institutions</span>
-            <span class="chevron" aria-hidden="true"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/canvas-users">Canvas Users</a></li>
-            <li><a href="/d2l-users">D2L Users</a></li>
-            <li><a href="/moodle-users">Moodle Users</a></li>
-            <li><a href="/blackboard-users">Blackboard Users</a></li>
-            <li><a href="/google-docs-users">Google Docs Users</a></li>
-            <li><a href="/lti-access">LTI Access</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="/about" class="nav-link">
-            <span>About</span>
-            <span class="chevron" aria-hidden="true"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/about-project">About the Project</a></li>
-            <li><a href="/related-research">Related Research</a></li>
-            <li><a href="/blog-articles">Blog Articles</a></li>
-            <li><a href="/team">Team</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <button class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
 </header>
