@@ -27,9 +27,7 @@
   color: #656a77;
 }
 
-/* =========================
-   TITLE SECTION
-========================= */
+/* TITLE SECTION */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -158,20 +156,18 @@
   }
 }
 
-/* =========================
-   accessible section
-========================= */
+/* accessible section */
 .accessible-section {
   background-color: #b5e2f8;
   padding: 15px 20px;
 }
 
 .accessible-wrapper {
-  max-width: 900px;   /* ← 原網站比較窄 */
+  max-width: 900px;   
   margin: 0 auto;
 }
 
-/* 標題 */
+/* title */
 .accessible-title {
   text-align: center;
   font-size: 24px;
@@ -180,7 +176,6 @@
   margin-bottom: 15px;
 }
 
-/* 上面那段 */
 .accessible-desc {
   text-align: left center;
   max-width: 700px;
@@ -191,7 +186,7 @@
   color: #2f3e4d;
 }
 
-/* container 左右區塊 */
+/* container */
 .accessible-container {
   display: flex;
   align-items: center;
@@ -199,14 +194,14 @@
   gap: 40px;
 }
 
-/* 左邊文字 */
+/* left context */
 .accessible-text {
   flex: 1;
   max-width: 700px;
   margin-left: 120px; 
 }
 
-/* Schools 那行 */
+/* Schools  */
 .accessible-sub {
   margin-bottom: 15px;
   color: #2f3e4d;
@@ -217,7 +212,7 @@
 /* list */
 .accessible-text ul {
   list-style: none;
-  padding: 10px; /* 🔥 修正 */
+  padding: 10px; 
 }
 
 .accessible-text li {
@@ -226,7 +221,7 @@
   position: relative;
 }
 
-/* 箭頭 */
+/* arrow */
 .accessible-text li::before {
   content: "➜";
   position: absolute;
@@ -234,7 +229,7 @@
   color: #7dabec;
 }
 
-/* 右邊圖片 */
+/* right pic */
 .accessible-image {
   flex: 1;
   display: flex;
@@ -242,7 +237,7 @@
 }
 
 .accessible-image img {
-  width: 350px;   /* 🔥 控制大小 */
+  width: 350px;   
   max-width: 100%;
 }
 
@@ -274,17 +269,17 @@
 .institution-section {
   background: #ffffff;
   text-align: center;
-  padding: 20px 40px 70px; /* 跟 pricing 一樣 */
+  padding: 20px 40px 70px; /* like pricing */
 }
 
 /* title */
 .institution-title {
-  font-size: 28px; /* 跟 pricing h2 一樣 */
+  font-size: 28px; /* like pricing h2 */
   color: #1f3b6d;
   margin-bottom: 10px;
 }
 
-/* description (subtitle 對齊 pricing) */
+/* description (subtitle pricing) */
 .institution-description {
   max-width: 720px;
   margin: 0 auto 40px;
@@ -298,7 +293,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px; /* 跟 pricing 一樣 */
+  gap: 0px; 
 }
 
 /* left image */
@@ -402,7 +397,7 @@
 /* Commitment */
 /* SECTION */
 .commitment-section {
-  background: #b5e2f8; /* 藍色背景 */
+  background: #b5e2f8; 
   padding: 20px 20px;
   text-align: center;
 }
@@ -430,7 +425,7 @@
   padding: 0px 10px;
 }
 
-/* 整個區塊 */
+/* entire block */
 .testimonial-box {
   margin: 30px auto;
   max-width: 700px;
@@ -438,7 +433,7 @@
   padding: 40px 80px;
 }
 
-/* 文字 */
+/* context */
 .testimonial-content p {
   margin: 0;
   color: #314761;
@@ -447,7 +442,7 @@
   text-align: left;
 }
 
-/* 作者 */
+/* author */
 .testimonial-meta {
   margin-top: 40px;
   text-align: right;
@@ -457,7 +452,7 @@
   padding-right: 35px;
 }
 
-/* 右邊直線 */
+/* right line */
 .testimonial-meta::after {
   content: "";
   position: absolute;
@@ -468,7 +463,7 @@
   background: #2c4c6b;
 }
 
-/* ⭐ quote */
+/* quote */
 .quote-mark {
   position: absolute;
   color: #284b6e;
@@ -486,7 +481,7 @@
   bottom: -75px;
 }
 
-/* ⭐ 左上橫線 */
+/* left top line */
 .line-top {
   position: absolute;
   top: 29px;
@@ -496,7 +491,7 @@
   background: #2c4c6b;
 }
 
-/* ⭐ 左邊直線 */
+/* left line */
 .line-left {
   position: absolute;
   top: 60px;
