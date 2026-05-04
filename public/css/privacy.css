@@ -1,0 +1,145 @@
+.privacy-hero {
+  text-align: center;
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #f2f5f7, #c8d6f1 ,#8cb7f8);
+}
+
+.privacy-hero h1 {
+  font-size: 46px;
+  color: #4d545c;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #363c43;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.date {
+  font-size: 16px;
+  color: #7c8a9c;
+}
+
+
+/* privacy body
+/* whole section background (same color after this) */
+.privacy-body {
+  background-color: #ffffff;   /* 👈 same soft gray/blue */
+  padding: 40px 40px;
+}
+
+/* the rounded box */
+.keypoints-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #e2ecfa; 
+  padding: 10px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* title */
+.keypoints-box h3 {
+  margin-bottom: 15px;
+  color: #2f3a44;
+  font-size: 17px;
+}
+
+/* list */
+.keypoints-box ul {
+  padding-left: 30px;
+}
+
+.keypoints-box li {
+  margin-bottom: 12px;
+  color: #2f3a44;
+  line-height: 1.4;
+}
+
+
+/* Introdcuton */
+.privacy-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* section title */
+.privacy-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #050709;
+}
+
+/* subsection title */
+.privacy-content h3 {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #080a0d;
+}
+
+/* paragraph */
+.privacy-content p {
+  color: #1d2328;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* email link */
+.privacy-content a {
+  color: #2a6db0;
+  text-decoration: underline;
+}
+
+/* section2*/
+/* list style (small gray bullets like screenshot) */
+.data-list {
+  margin-top: 20px;
+  padding-left: 45px;
+}
+
+.data-list li {
+  margin-bottom: 18px;
+  color: #3f4a54;
+  font-size: 18px;
+}
+
+/* for button */
+.button-group {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* mobile friendly */
+  justify-content: center;
+  align-items: center;
+}
+
+/* button style */
+.btn-outline {
+  display: inline-block;          /* important for padding + shape */
+  padding: 10px 32px;             
+  border: 2px solid #3b82f6;      
+  border-radius: 999px;           /* perfect pill shape */
+  color: #3b82f6;
+  text-decoration: none;          
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+/* hover effect */
+.btn-outline:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+/* link*/
+.privacy-content a {
+  color: #1657e2;
+  font-weight: 600;   
+}
