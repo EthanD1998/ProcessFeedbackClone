@@ -739,6 +739,75 @@ a {
     color: #1e3a5f;
 }
 
+.organizations-section {
+    background: #d9ecff;
+    padding: 70px 20px 90px;
+    text-align: center;
+}
+
+    .organizations-section h2 {
+        color: #003b73;
+        font-size: 28px;
+        margin-bottom: 55px;
+    }
+
+.organizations-grid {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.organization-card {
+    width: 300px;
+    min-height: 390px;
+    border-radius: 26px;
+    padding: 42px 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.organization-logo-wrap {
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+    .organization-card img {
+        max-width: 190px;
+        max-height: 75px;
+        object-fit: contain;
+    }
+
+    .organization-card p {
+        color: #16385f;
+        font-size: 16px;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+.judge-card {
+    background: #ffd9a8;
+}
+
+.cloudflare-card {
+    background: #d9cff8;
+}
+
+.mizzou-card {
+    background: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .organizations-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /* GRID */
 .team-grid {
     max-width: 900px;
