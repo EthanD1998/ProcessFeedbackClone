@@ -35,6 +35,14 @@ router.get("/Attribution", (req, res) =>{
     });
 })
 
+// privacy policy
+router.get('/privacy', (req, res) => {
+    res.render("privacy", {
+        title: "Privacy Policy",
+        page: "privacy policy"
+    });
+});
+
 router.post("/contact", async (req, res) => {
 
     const { honeypot } = req.body;
