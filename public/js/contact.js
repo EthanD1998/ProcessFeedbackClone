@@ -43,3 +43,30 @@ if (form) {
         }, 2000);
     });
 }
+
+const copyBtn = document.getElementById("copy-email-btn");
+const contactEmail = document.getElementById("contact-email");
+
+if (copyBtn && contactEmail) {
+    copyBtn.addEventListener("click", function () {
+        const email = contactEmail.textContent.trim();
+
+        navigator.clipboard.writeText(email).then(() => {
+
+            
+            copyBtn.innerText = "Email Address Copied";
+            copyBtn.disabled = true;
+
+            let msg = document.querySelector(".copy-success-msg");
+
+            if (!msg) {
+                msg = document.createElement("div");
+                msg.className = "copy-success-msg";
+                msg.innerText = "Email address copied. Open your email, paste the address, and send your message.";
+
+                copyBtn.parentElement.appendChild(msg);
+            }
+
+        });
+    });
+}
