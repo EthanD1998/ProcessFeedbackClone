@@ -1,7 +1,7 @@
 @media print {
     @page {
         size: letter portrait;
-        margin: 0;
+        margin: 0.4in;
     }
 
     html,
@@ -9,9 +9,11 @@
         margin: 0 !important;
         padding: 0 !important;
         background: #fff !important;
+        color: #000 !important;
         overflow: visible !important;
     }
 
+    /* Hide header/footer */
     .site-header,
     .site-footer,
     header,
@@ -20,97 +22,66 @@
         display: none !important;
     }
 
-    body {
-        width: 100% !important;
-    }
-
+    /* Fix main layout (REMOVE 1280px issue) */
     main,
     .page-wrapper,
     .site-main {
-        width: 1280px !important;
-        max-width: 1280px !important;
-        min-width: 1280px !important;
-        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
         padding: 0 !important;
-        transform: none !important;
-        zoom: 0.98;
     }
 
-    .hero-buttons {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 28px !important;
-        flex-wrap: nowrap !important;
+    /* Fix section spacing */
+    section,
+    .hero-section,
+    .what-is-section,
+    .reveal-process-section,
+    .countries-section,
+    .stats-strip {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 14px 20px !important;
+        margin: 0 !important;
+        page-break-before: auto !important;
+        page-break-after: auto !important;
+        break-before: auto !important;
+        break-after: auto !important;
     }
 
+    /* Inner containers */
+    .hero-inner,
+    .stats-inner,
+    .reveal-process-card,
+    .countries-map-wrap {
+        max-width: 100% !important;
+        margin: 0 auto 14px !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Layout fixes */
+    .hero-buttons,
     .stats-inner {
         display: flex !important;
         justify-content: center !important;
-        gap: 32px !important;
+        gap: 18px !important;
         flex-wrap: nowrap !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-        max-width: 1100px !important;
     }
-    .stats-strip {
-        margin-top: 0 !important;
-        padding-top: 20px !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-    }
+
     .hero-features {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
-        gap: 10px 44px !important;
-        max-width: 700px !important;
+        gap: 6px 28px !important;
+        max-width: 100% !important;
     }
 
-    .hero-section {
-        min-height: auto !important;
-        padding-top: 70px !important;
-        padding-bottom: 70px !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-        page-break-after: always !important;
-        break-after: page !important;
-    }
-    .hero-inner {
-        margin-top: 0 !important;
-        margin-bottom: 40px !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-        max-width: 1100px !important;
-    }
-
-    .what-is-section {
-        page-break-before: auto !important;
-        page-break-after: auto !important;
-        break-after: auto !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-    }
-
-    .reveal-process-section {
-        page-break-before: auto !important;
-        page-break-after: always !important;
-        break-after: page !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
-    }
-
-    .countries-section {
-        page-break-before: auto !important;
-        break-before: auto !important;
-        padding-top: 20px !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
+    /* Prevent images breaking pages */
+    img {
+        max-width: 85% !important;
+        height: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
 
     .countries-map-wrap {
@@ -118,6 +89,7 @@
         break-inside: avoid !important;
     }
 
+    /* Remove animations */
     .reveal-up,
     .reveal-on-scroll,
     .in-view,
@@ -128,35 +100,64 @@
         transition: none !important;
     }
 
+    /* Clean links */
     a[href]::after {
         content: "" !important;
     }
-    .what-is-section,
-    .reveal-process-section {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
+
+    /* Better spacing (fix big gaps) */
+    section {
         margin-bottom: 20px !important;
     }
 
-    .reveal-process-card {
-        max-width: 1100px !important;
-        padding: 48px 56px 44px !important;
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        box-sizing: border-box !important;
+    h1,
+    h2 {
+        margin-bottom: 10px !important;
     }
 
-    .reveal-process-list li {
-        font-size: 1.08rem !important;
-        line-height: 1.9 !important;
+    p {
+        margin-bottom: 8px !important;
+        line-height: 1.6 !important;
+    }
+    /* Keep organizations cards together when printing */
+    .organizations-section {
+        page-break-before: auto !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        padding: 12px 20px !important;
     }
 
-    .what-is-text,
-    .testimonial-content p,
-    .countries-description,
-    .hero-description {
-        font-size: 1.06rem !important;
-        line-height: 1.85 !important;
+    .organizations-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 14px !important;
+        justify-content: center !important;
+        align-items: stretch !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .organization-card {
+        width: 30% !important;
+        min-height: auto !important;
+        padding: 18px 16px !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    .organization-logo-wrap {
+        height: 45px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .organization-card img {
+        max-height: 40px !important;
+        max-width: 140px !important;
+    }
+
+    .organization-card p {
+        font-size: 10pt !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
     }
 }
