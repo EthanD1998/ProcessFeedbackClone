@@ -21,14 +21,14 @@ router.get("/contact", (req, res) => {
 
 // Pricing page
 router.get("/pricing", (req, res) => {
-    res.render("pricing", { 
+    res.render("pricing", {
         title: "Pricing",
         page: "pricing"
     });
 });
 
 // Attribution Page
-router.get("/Attribution", (req, res) =>{
+router.get("/Attribution", (req, res) => {
     res.render("attribution", {
         title: "Attribution",
         page: "attribution"
@@ -43,8 +43,11 @@ router.get('/privacy', (req, res) => {
     });
 });
 
-router.post("/contact", async (req, res) => {
+const { Resend } = require("resend");
 
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+router.post("/contact", async (req, res) => {
     const { honeypot } = req.body;
 
     if (honeypot) {
@@ -55,6 +58,7 @@ router.post("/contact", async (req, res) => {
 
     if (!name || !email || !confirmEmail || !subject || !message) {
         return res.render("contact", {
+            title: "Contact",
             error: "All fields are required."
         });
     }
@@ -63,52 +67,60 @@ router.post("/contact", async (req, res) => {
 
     if (!emailPattern.test(email)) {
         return res.render("contact", {
+            title: "Contact",
             error: "Please enter a valid email address."
         });
     }
 
     if (email !== confirmEmail) {
         return res.render("contact", {
+            title: "Contact",
             error: "Emails do not match."
         });
     }
 
     try {
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
-            }
-        });
-
-        // send to you
-        await transporter.sendMail({
-            from: `"Website Contact Form" <${process.env.EMAIL_USER}>`,
+        // Send message to you
+        await resend.emails.send({
+            from: "Website Contact Form <onboarding@resend.dev>",
             to: process.env.EMAIL_USER,
-            replyTo: email,
+            reply_to: email,
             subject: `New Contact Message from ${name}: ${subject}`,
-            text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`
+            text: `
+            Name: ${name}
+            Email: ${email}
+            Subject: ${subject}
+            
+            Message:
+            ${message}
+            `
         });
-        
 
-        // auto reply
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+        /* commented out unless we want to setup a domain
+        // Send automatic reply to the person who filled out the form
+        await resend.emails.send({
+            from: "Website Contact Form <onboarding@resend.dev>",
             to: email,
             subject: "We got your message",
-            text: `Hi ${name}, we received your message and will reply soon.`
+            text: `Hi ${name},
+            
+            We received your message and will reply soon.
+            Thank you.`
         });
-
-        res.render("contact", {
+        */
+        return res.render("contact", {
             title: "Contact",
             success: "Message sent successfully!"
         });
 
     } catch (err) {
-        console.log(err);
+        console.error("Contact form email error:", {
+            message: err.message,
+            name: err.name,
+            statusCode: err.statusCode
+        });
 
-        res.render("contact", {
+        return res.render("contact", {
             title: "Contact",
             error: "Something went wrong. Try again."
         });
