@@ -96,6 +96,7 @@ router.post("/contact", async (req, res) => {
             `
         });
 
+        /* commented out unless we want to setup a domain
         // Send automatic reply to the person who filled out the form
         await resend.emails.send({
             from: "Website Contact Form <onboarding@resend.dev>",
@@ -106,7 +107,7 @@ router.post("/contact", async (req, res) => {
             We received your message and will reply soon.
             Thank you.`
         });
-
+        */
         return res.render("contact", {
             title: "Contact",
             success: "Message sent successfully!"
